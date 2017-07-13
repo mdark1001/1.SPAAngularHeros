@@ -1,0 +1,20 @@
+<h1>Buscador {{params_tern}}</h1>
+<hr>
+<div class="card-columns">
+
+
+<div *ngFor="let h of heroes; let i =index"  class="card">
+   <img class="card-img-top img-fluid" [src]="h.img" alt="">
+   <div class="card-block">
+     <h4 class="card-title">{{h.nombre}}</h4>
+     <p class="card-text">{{h.casa}}</p>
+     <p class="card-text"><small class="text-muted">{{h.aparicion}}</small></p>
+
+     <div (click)="VerMas(i)" class="btn btn-outline-primary btn-block">
+       Más
+     </div>
+     <!-- <a [routerLink]="['/heroe',i]" class="btn  btn-outline-primary btn-block">Ver más</a> -->
+   </div>
+ </div>
+
+ </div>
